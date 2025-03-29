@@ -1,4 +1,5 @@
 Dim defaultPage
+Echo "Loading..."
 
 ' ----------------------------------
 ' SETTINGS
@@ -8,8 +9,13 @@ Dim defaultPage
 defaultPage = "google.com"
 
 ' End of Settings
-' I don't recommend tampering with this script, it's not as simple as running IExplore.exe anymore
 ' ----------------------------------
+
+Function Echo(input)
+    If InStr(1, WScript.FullName, "cscript.exe", vbTextCompare) > 0 Then
+      WScript.Echo input
+    End If
+End Function
 
 Dim args, inputValue
 
@@ -19,12 +25,13 @@ Else
     inputValue = defaultPage
 End If
 
+Echo "Running page: " & inputValue
 Set objIE = CreateObject("InternetExplorer.Application")
 objIE.Navigate inputValue
 objIE.Visible = True
 
 Do While True
-    WScript.Sleep 1000
+    WScript.Sleep 10000000
 Loop
 
 objIE.Quit
