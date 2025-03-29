@@ -31,4 +31,5 @@ Also, I know that VBScript is the most malware-ish scripting language, but whate
 
 ## 0.0.0B - 3/29/25
 
+- Logging (with `cscript`)
 - Documentation updates
