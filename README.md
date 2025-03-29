@@ -1,6 +1,6 @@
 # Revival of Internet Explorer
 
-Version 0.0.0A
+Version 0.0.0B
 
 I needed ChatGPT as I had no experience in Visual Basic or VBScript, but I constructed the script.
 
